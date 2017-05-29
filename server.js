@@ -79,9 +79,9 @@ app.get("/scrape", function(req, res) {
       });
 
     });
+    res.redirect("/");
+    console.log("Successfully Scraped");
   });
-  // Tell the browser that we finished scraping the text
-  res.send("Scrape Complete");
 });
 
 app.get("/", function (req, res) {

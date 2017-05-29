@@ -1,0 +1,30 @@
+{
+  "name": "mongowebscrape",
+  "version": "1.0.0",
+  "description": "GT week 18 homework",
+  "main": "server.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amacwhirter/MongoWebScrape.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "adm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amacwhirter/MongoWebScrape/issues"
+  },
+  "homepage": "https://github.com/amacwhirter/MongoWebScrape#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.10.3",
+    "request": "^2.81.0"
+  }
+}

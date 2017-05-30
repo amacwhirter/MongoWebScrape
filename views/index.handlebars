@@ -1,7 +1,7 @@
 <div class = "container" >
 <div class="jumbotron">
      <h1>SCRAPED OIL</h1>
-       <h3>All recent Edmonton Oilers news - Comment on your Favourite!</h3>
+       <h3>All Recent Edmonton Oilers News - Add and Read Notes from Fellow Fans!</h3>
        <a href="/scrape"> <button type="button" class="btn btn-danger scrape" > Scrape for Articles </button></a>
 </div>
 <div class="article-container">
@@ -9,10 +9,10 @@
     {{#each Article}}
   <div class="row">
 
-<div class="panel panel-warning">
-  <div class="panel-heading">{{this.headline}}
+<div class="panel panel-primary">
+  <div class="panel-heading">{{this.title}}
     <a href="/notes/{{this._id}}">
-    <button type="button" class="btn btn-primary save-article" >See Notes</button> </a>
+    <button type="button" class="btn btn-warning save-article" >See Notes</button> </a>
   </div>
   <div class="panel-body">
     <a href= "https://www.nhl.com/oilers{{this.link}}" target="_blank"> {{this.link}}</a>

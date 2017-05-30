@@ -1,16 +1,15 @@
 <div class = "container" >
 <div class="jumbotron">
-     <h2>Oilers News Scraper</h2>
-       <h3>All recent Oilers news - save and comment on your favourite!</h3>
+     <h1>SCRAPED OIL</h1>
+       <h3>All recent Edmonton Oilers news - Comment on your Favourite!</h3>
+       <a href="/scrape"> <button type="button" class="btn btn-danger scrape" > Scrape for Articles </button></a>
 </div>
-<div> <a href="/scrape"> Scrape for Articles </a></div>
-
 <div class="article-container">
 
     {{#each Article}}
   <div class="row">
 
-<div class="panel panel-default">
+<div class="panel panel-warning">
   <div class="panel-heading">{{this.headline}}
     <a href="/notes/{{this._id}}">
     <button type="button" class="btn btn-primary save-article" >See Notes</button> </a>

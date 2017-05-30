@@ -1,21 +1,15 @@
-<div class="notes-container">
+<div class = "container" >
 
+  <div class="jumbotron">
   {{#each Article}}
-  <div class="row">
-<div class="panel panel-default">
-  <div class="panel body">
-    <div class="col-md-8">
-      <h4> {{this.headline}}</h4>
-    </div>
+  <h2> "{{this.title}}" </h2>
+  <h4><a href= "https://www.nhl.com/oilers{{this.link}}" target="_blank"> {{this.link}}</a></h4><hr>
+    <button type="button" data-id="{{this._id}}" class="btn btn-warning" id="add-note" data-toggle="modal" data-target="#noteModal">Add Note</button>
+    <a href="/"> <button type="button" class="btn btn-primary save-article" >Back to Articles</button> </a>
+  </div>
 
-   <div class ="col-md-4">
-     <button type="button" data-id="{{this._id}}" class="btn btn-primary" id="add-note" data-toggle="modal" data-target="#noteModal">Add Note</button>
-     <a href="/"> <button type="button" class="btn btn-primary save-article" >Back to Articles</button> </a>
- </div>
-  </div></div>
   {{/each}}
-</div>
-
+<br>
 {{#each Article}}
 {{#each this.note}}
 <div class = "well">
@@ -26,8 +20,10 @@
         </form>
 
   </div>
+    {{/each}} {{/each}}
+</div>
 
-  {{/each}} {{/each}}
+
 
 <!-- Modal -->
 

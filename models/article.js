@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 // Make LibrarySchema a Schema
 var ArticleSchema = new Schema({
   // name: a unique string
-  headline: {
+  title: {
     type: String,
     unique: true
   },

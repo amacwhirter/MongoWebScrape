@@ -5,8 +5,9 @@ var mongoose = require("mongoose");
 var path = require("path");
 var methodOverride = require("method-override");
 // Requiring our Note and Article models
-var Article = require("./models/Article.js");
-var Note = require("./models/Note.js");
+var Note = require("./models/note.js");
+var Article = require("./models/article.js");
+
 // Our scraping tools
 var request = require("request");
 var cheerio = require("cheerio");

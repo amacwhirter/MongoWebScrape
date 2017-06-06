@@ -46,8 +46,12 @@ db.once("open", function() {
 });
 
 //=========Routes==========//
+//home page
+app.get("/", function(req, res) {
+    res.render('index');
+});
 
-app.get("/", function (req, res) {
+/*app.get("/", function (req, res) {
   Article.find({})
     .exec(function (error, data) {
       if (error) {
@@ -60,7 +64,7 @@ app.get("/", function (req, res) {
         res.render("index", newsObj);
       }
     });
-});
+});*/
 
 // A GET request to scrape the nhl/oilers website
 app.get("/scrape", function(req, res) {

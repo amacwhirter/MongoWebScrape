@@ -33,6 +33,7 @@ app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
 
+/*
 var databaseUri = "mongodb://localhost/nhlscrape";
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI);
@@ -40,9 +41,10 @@ if (process.env.MONGODB_URI) {
   mongoose.connect(databaseUri);
 }
 var db = mongoose.connection;
+*/
 
-/*mongoose.connect("mongodb://heroku_nfnl7pkj:8c21a3t2gnun6vodrf344ler3h@ds151059.mlab.com:51059/heroku_nfnl7pkj");
-var db = mongoose.connection;*/
+mongoose.connect("mongodb://heroku_nfnl7pkj:8c21a3t2gnun6vodrf344ler3h@ds151059.mlab.com:51059/heroku_nfnl7pkj");
+var db = mongoose.connection;
 
 // Show any mongoose errors
 db.on("error", function(error) {

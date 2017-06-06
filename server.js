@@ -14,6 +14,7 @@ mongoose.Promise = Promise;
 
 // Initialize Express
 var app = express();
+var PORT = process.env.PORT || 3000;
 
 // Use body parser with our app
 app.use(bodyParser.urlencoded({

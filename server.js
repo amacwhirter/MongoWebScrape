@@ -2,6 +2,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var path = require("path");
+var methodOverride = require('method-override');
 // Requiring our Note and Article models
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
@@ -20,6 +22,9 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({
   extended: false
 }));
+
+// override with POST having ?_method=PUT
+app.use(methodOverride('_method'));
 
 // Make public a static dir
 app.use(express.static("./public"));

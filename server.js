@@ -47,6 +47,21 @@ db.once("open", function() {
 
 //=========Routes==========//
 
+app.get("/", function (req, res) {
+  Article.find({})
+    .exec(function (error, data) {
+      if (error) {
+        res.send(error);
+      }
+      else {
+        var newsObj = {
+          Article: data
+        };
+        res.render("index", newsObj);
+      }
+    });
+});
+
 // A GET request to scrape the nhl/oilers website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
@@ -83,21 +98,6 @@ app.get("/scrape", function(req, res) {
     res.redirect("/");
     console.log("Successfully Scraped");
   });
-});
-
-app.get("/", function (req, res) {
-  Article.find({})
-    .exec(function (error, data) {
-      if (error) {
-        res.send(error);
-      }
-      else {
-        var newsObj = {
-          Article: data
-        };
-        res.render("index", newsObj);
-      }
-    });
 });
 
 app.post("/notes/:id", function (req, res) {

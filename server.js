@@ -32,7 +32,7 @@ app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
 
-mongoose.connect("mongodb://heroku_wwkmwqf6:35e1j4ld49k4k1nomqgedohu43@ds133378.mlab.com:33378/heroku_wwkmwqf6");
+mongoose.connect("mongodb://amacwhirter:mongowebscrape1@ds133378.mlab.com:33378/heroku_wwkmwqf6");
 var db = mongoose.connection;
 
 // Show any mongoose errors

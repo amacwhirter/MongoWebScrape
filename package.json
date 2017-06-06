@@ -4,7 +4,7 @@
   "description": "GT week 18 homework",
   "main": "server.js",
   "scripts": {
-    "test": "none"
+    "test": "none",
     "start": "node server.js"
   },
   "repository": {
